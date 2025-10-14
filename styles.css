@@ -14,6 +14,7 @@ body {
   gap: 2.5rem;
   align-items: flex-start;
   padding: 2rem clamp(1.5rem, 4vw, 4rem);
+  min-height: 100vh;
 }
 
 .controls {
@@ -279,7 +280,7 @@ body {
 .booking-card__header {
   display: flex;
   gap: 0.65rem;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .booking-card__header h3 {
@@ -295,6 +296,8 @@ body {
   justify-content: space-between;
   width: 100%;
   gap: 0.75rem;
+  margin-left: 0.3rem;
+  padding-left: 0.1rem;
 }
 
 .title-text {
@@ -324,6 +327,7 @@ body {
 .card-icon.warn {
   width: 30px;
   height: 30px;
+  margin-left: -0.1rem;
 }
 
 .booking-card__body {
@@ -525,7 +529,8 @@ body {
 
 @media (max-width: 640px) {
   .page {
-    padding: 1.2rem 1rem;
+    padding: 0;
+    min-height: 100vh;
   }
 
   .controls {
@@ -534,7 +539,16 @@ body {
 
   .phone {
     width: 100%;
-    max-width: 420px;
-    border-radius: 32px;
+    max-width: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    min-height: 100vh;
+  }
+
+  html,
+  body {
+    background: #f5f6f8;
+    min-height: 100%;
   }
 }
