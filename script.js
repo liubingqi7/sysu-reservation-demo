@@ -36,6 +36,23 @@ contactsField.addEventListener("input", updateContacts);
 updateContacts();
 
 const statusField = document.getElementById("field-status");
+const statusSelect = document.getElementById("status-select");
+
+const updateStatusSelect = () => {
+  const value = statusField.value.trim() || "已预约";
+  if (statusSelect.options.length > 0) {
+    statusSelect.options[0].textContent = value;
+    statusSelect.value = value;
+  }
+};
+
+statusField.addEventListener("input", updateStatusSelect);
+updateStatusSelect();
+
+statusSelect.addEventListener("change", () => {
+  statusField.value = statusSelect.value;
+  statusField.dispatchEvent(new Event("input"));
+});
 
 const bookingCard = document.getElementById("booking-card");
 const modal = document.getElementById("booking-modal");
