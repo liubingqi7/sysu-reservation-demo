@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>中山大学体育场馆预约系统示例</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="theme-color" content="#0d5b32" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <section class="controls" aria-labelledby="controls-title">
+        <h1 id="controls-title">可编辑的预约信息</h1>
+        <p>修改下方内容，右侧预览会实时更新。</p>
+        <div class="controls-grid">
+          <label>
+            标题
+            <input id="field-title" type="text" value="中山大学体育场馆预约系统" />
+          </label>
+          <label>
+            预约卡片标题
+            <input
+              id="field-venue"
+              type="text"
+              value="深圳校区健身房"
+            />
+          </label>
+          <label>
+            预约编号
+            <input
+              id="field-code"
+              type="text"
+              value="#RB-45OOU0JH8Z"
+            />
+          </label>
+          <label>
+            费用
+            <input id="field-fee" type="text" value="运动时 ¥5" />
+          </label>
+          <label>
+            预约日期
+            <input id="field-date" type="text" value="2025年9月30日" />
+          </label>
+          <label>
+            预约时段
+            <input id="field-timeRange" type="text" value="20:00 - 22:00" />
+          </label>
+          <label>
+            场地名称
+            <input
+              id="field-location"
+              type="text"
+              value="深圳校区健身房-场地1"
+            />
+          </label>
+          <label>
+            预约状态
+            <input id="field-status" type="text" value="已预约" />
+          </label>
+          <label>
+            页脚地址
+            <input
+              id="field-address"
+              type="text"
+              value="广东省广州市海珠区新港西路135号"
+            />
+          </label>
+          <label>
+            申请说明
+            <input
+              id="field-note"
+              type="text"
+              value="填表申请补发运动时："
+            />
+          </label>
+          <label>
+            联系方式
+            <textarea id="field-contacts" rows="3">联系我们：zdtiyu@163.com | 体育场馆物业值班电话：
+南校区：020-84115839 北校区：020-87335717 东校区：020-39333766 深圳校区：0755-23260027 珠海校区：0756-3668220</textarea>
+          </label>
+        </div>
+      </section>
+      <main class="preview" aria-label="界面预览">
+        <div class="phone">
+          <div class="status-bar">
+            <span id="status-time">16:17</span>
+            <div class="status-icons">
+              <span class="icon wifi" aria-hidden="true"></span>
+              <span class="icon rotation" aria-hidden="true"></span>
+              <span class="icon alarm" aria-hidden="true"></span>
+              <span class="icon data" aria-hidden="true">2.40 KB/s</span>
+              <span class="icon network" aria-hidden="true">5G</span>
+              <span class="icon signal" aria-hidden="true"></span>
+              <span class="icon battery" aria-hidden="true">
+              <span class="battery-level"></span>
+              </span>
+            </div>
+          </div>
+          <header class="app-bar">
+            <button class="icon-button back" aria-label="返回">
+              <span class="chevron"></span>
+            </button>
+            <h2 id="title">中山大学体育场馆预约系统</h2>
+            <button class="icon-button menu" aria-label="更多">
+              <span class="dot"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </button>
+          </header>
+          <section class="banner">
+            <img
+              src="assets/banner.png"
+              alt="中山大学体育场馆预约系统抬头图"
+              class="banner-img"
+            />
+          </section>
+          <section class="tabs">
+            <div class="tab-buttons">
+              <button class="tab-button active">我的预约</button>
+              <button class="tab-button">我的邀请</button>
+              <button class="tab-button">我的排队</button>
+            </div>
+            <div class="filters">
+              <img
+                src="assets/filter-group.png"
+                alt="预约日期与状态筛选"
+                class="filters-img"
+              />
+              <select id="status-select" class="hidden-select">
+                <option>已预约</option>
+              </select>
+            </div>
+          </section>
+          <section class="booking-card" id="booking-card" tabindex="0">
+            <header class="booking-card__header">
+              <img
+                src="assets/icon-alert.png"
+                alt=""
+                class="card-icon warn"
+                aria-hidden="true"
+              />
+              <div class="title-row">
+                <div class="title-text">
+                  <h3 id="venue">深圳校区健身房</h3>
+                </div>
+                <span class="badge" id="status-badge">已预约</span>
+              </div>
+            </header>
+            <div class="booking-card__body">
+              <div class="code-row">
+                <p class="booking-code" id="code">#RB-45OOU0JH8Z</p>
+                <p class="booking-fee" id="fee">运动时 ¥5</p>
+              </div>
+              <div class="booking-detail">
+                <img
+                  src="assets/icon-calendar.png"
+                  alt=""
+                  class="card-icon"
+                  aria-hidden="true"
+                />
+                <span id="date">2025年9月30日</span>
+              </div>
+              <div class="booking-detail">
+                <img
+                  src="assets/icon-clock.png"
+                  alt=""
+                  class="card-icon"
+                  aria-hidden="true"
+                />
+                <span id="timeRange">20:00 - 22:00</span>
+              </div>
+              <div class="booking-detail">
+                <img
+                  src="assets/icon-location.png"
+                  alt=""
+                  class="card-icon"
+                  aria-hidden="true"
+                />
+                <span id="location">深圳校区健身房-场地1</span>
+              </div>
+            </div>
+            <footer class="booking-card__footer">
+              <button class="secondary">取消</button>
+            </footer>
+          </section>
+          <nav class="pagination">
+            <button class="pager">&lt;</button>
+            <button class="pager current">1</button>
+            <button class="pager">&gt;</button>
+          </nav>
+          <footer class="app-footer">
+            <h3>中山大学体育场馆预约系统</h3>
+            <p id="address">广东省广州市海珠区新港西路135号</p>
+            <p id="note">填表申请补发运动时：</p>
+            <div class="footer-flex">
+              <div class="qr-box" role="img" aria-label="示例二维码"></div>
+              <p id="contacts">
+                联系我们：zdtiyu@163.com | 体育场馆物业值班电话：<br />
+                南校区：020-84115839 北校区：020-87335717 东校区：020-39333766
+                深圳校区：0755-23260027 珠海校区：0756-3668220
+              </p>
+            </div>
+          </footer>
+        </div>
+      </main>
+      <div class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title" id="booking-modal">
+        <div class="modal-content">
+          <h3 id="modal-title">我的预约</h3>
+          <dl class="modal-list">
+            <div>
+              <dt>场馆：</dt>
+              <dd id="modal-venue">深圳校区健身房</dd>
+            </div>
+            <div>
+              <dt>预约日期：</dt>
+              <dd id="modal-date">2025年9月30日</dd>
+            </div>
+            <div>
+              <dt>预约时段：</dt>
+              <dd id="modal-timeRange">20:00 - 22:00</dd>
+            </div>
+            <div>
+              <dt>场地名称：</dt>
+              <dd id="modal-location">深圳校区健身房-场地1</dd>
+            </div>
+            <div>
+              <dt>预约编号：</dt>
+              <dd id="modal-code">#RB-45OOU0JH8Z</dd>
+            </div>
+            <div>
+              <dt>费用：</dt>
+              <dd id="modal-fee">运动时 ¥5</dd>
+            </div>
+          </dl>
+          <button class="modal-close" id="modal-close">确认</button>
+        </div>
+      </div>
+      <div class="backdrop hidden" id="backdrop"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
