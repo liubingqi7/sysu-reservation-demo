@@ -116,80 +116,84 @@
               class="banner-img"
             />
           </section>
-          <section class="tabs">
-            <div class="tab-buttons">
-              <button class="tab-button active">我的预约</button>
-              <button class="tab-button">我的邀请</button>
-              <button class="tab-button">我的排队</button>
+          <section class="content-panel">
+            <div class="panel-header">
+              <div class="tab-buttons">
+                <button class="tab-button active">我的预约</button>
+                <button class="tab-button">我的邀请</button>
+                <button class="tab-button">我的排队</button>
+              </div>
+              <div class="filters">
+                <img
+                  src="assets/filter-group.png"
+                  alt="预约日期和状态筛选"
+                  class="filters-img"
+                />
+                <select id="status-select" class="filters-select">
+                  <option>已预约</option>
+                </select>
+              </div>
             </div>
-            <div class="filters">
-              <img
-                src="assets/filter-group.png"
-                alt="预约日期和状态筛选"
-                class="filters-img"
-              />
-              <select id="status-select" class="filters-select">
-                <option>已预约</option>
-              </select>
-            </div>
-          </section>
-          <section class="booking-card" id="booking-card" tabindex="0">
-            <header class="booking-card__header">
-              <img
-                src="assets/icon-alert.png"
-                alt=""
-                class="card-icon warn"
-                aria-hidden="true"
-              />
-              <div class="title-row">
-                <div class="title-text">
-                  <h3 id="venue">深圳校区健身房</h3>
+            <div class="booking-surface">
+              <section class="booking-card" id="booking-card" tabindex="0">
+                <header class="booking-card__header">
+                  <img
+                    src="assets/icon-alert.png"
+                    alt=""
+                    class="card-icon warn"
+                    aria-hidden="true"
+                  />
+                  <div class="title-row">
+                    <div class="title-text">
+                      <h3 id="venue">深圳校区健身房</h3>
+                    </div>
+                    <span class="badge" id="status-badge">已预约</span>
+                  </div>
+                </header>
+                <div class="booking-card__body">
+                  <div class="code-row">
+                    <p class="booking-code" id="code">#RB-45OOU0JH8Z</p>
+                    <p class="booking-fee" id="fee">运动时 ¥5</p>
+                  </div>
+                  <div class="booking-detail">
+                    <img
+                      src="assets/icon-calendar.png"
+                      alt=""
+                      class="card-icon"
+                      aria-hidden="true"
+                    />
+                    <span id="date">2025年9月30日</span>
+                  </div>
+                  <div class="booking-detail">
+                    <img
+                      src="assets/icon-clock.png"
+                      alt=""
+                      class="card-icon"
+                      aria-hidden="true"
+                    />
+                    <span id="timeRange">20:00 - 22:00</span>
+                  </div>
+                  <div class="booking-detail">
+                    <img
+                      src="assets/icon-location.png"
+                      alt=""
+                      class="card-icon"
+                      aria-hidden="true"
+                    />
+                    <span id="location">深圳校区健身房-场地1</span>
+                  </div>
                 </div>
-                <span class="badge" id="status-badge">已预约</span>
-              </div>
-            </header>
-            <div class="booking-card__body">
-              <div class="code-row">
-                <p class="booking-code" id="code">#RB-45OOU0JH8Z</p>
-                <p class="booking-fee" id="fee">运动时 ¥5</p>
-              </div>
-              <div class="booking-detail">
-                <img
-                  src="assets/icon-calendar.png"
-                  alt=""
-                  class="card-icon"
-                  aria-hidden="true"
-                />
-                <span id="date">2025年9月30日</span>
-              </div>
-              <div class="booking-detail">
-                <img
-                  src="assets/icon-clock.png"
-                  alt=""
-                  class="card-icon"
-                  aria-hidden="true"
-                />
-                <span id="timeRange">20:00 - 22:00</span>
-              </div>
-              <div class="booking-detail">
-                <img
-                  src="assets/icon-location.png"
-                  alt=""
-                  class="card-icon"
-                  aria-hidden="true"
-                />
-                <span id="location">深圳校区健身房-场地1</span>
-              </div>
+                <footer class="booking-card__footer">
+                  <button class="secondary">取消</button>
+                </footer>
+              </section>
             </div>
-            <footer class="booking-card__footer">
-              <button class="secondary">取消</button>
-            </footer>
+            <nav class="pagination">
+              <button class="pager">&lt;</button>
+              <button class="pager current">1</button>
+              <button class="pager">&gt;</button>
+            </nav>
           </section>
-          <nav class="pagination">
-            <button class="pager">&lt;</button>
-            <button class="pager current">1</button>
-            <button class="pager">&gt;</button>
-          </nav>
           <footer class="app-footer">
             <h3>中山大学体育场馆预约系统</h3>
             <p id="address">广东省广州市海珠区新港西路135号</p>
