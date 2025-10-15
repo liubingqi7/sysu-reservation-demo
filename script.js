@@ -108,3 +108,12 @@ const toggleFullscreen = () => {
 };
 
 fullscreenBtn.addEventListener("click", toggleFullscreen);
+
+// 手机端自动触发地址栏隐藏
+if (window.innerWidth <= 640) {
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      window.scrollTo(0, 1);
+    }, 100);
+  });
+}

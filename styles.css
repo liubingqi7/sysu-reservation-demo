@@ -7,6 +7,13 @@ body {
   font-family: "PingFang SC", "Microsoft YaHei", "Heiti SC", sans-serif;
   background: #f3f4f6;
   color: #1f2933;
+  /* 手机端优化：固定高度触发地址栏隐藏 */
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+html {
+  height: -webkit-fill-available;
 }
 
 .fullscreen-button {
@@ -631,14 +638,6 @@ body:-ms-fullscreen .fullscreen-button {
   }
 
   .fullscreen-button {
-    top: 10px;
-    right: 10px;
-    padding: 0.6rem 1rem;
-    font-size: 0.85rem;
-  }
-
-  .fullscreen-button svg {
-    width: 18px;
-    height: 18px;
+    display: none;
   }
 }

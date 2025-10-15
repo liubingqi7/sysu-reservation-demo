@@ -1,0 +1,19 @@
+{
+  "name": "中山大学体育场馆预约系统",
+  "short_name": "体育预约",
+  "description": "中山大学体育场馆预约系统示例",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0d5b32",
+  "theme_color": "#0d5b32",
+  "orientation": "portrait",
+  "scope": "./",
+  "icons": [
+    {
+      "src": "assets/banner.png",
+      "sizes": "any",
+      "type": "image/png"
+    }
+  ]
+}
+
