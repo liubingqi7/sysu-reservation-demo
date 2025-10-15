@@ -7,6 +7,7 @@ const textBindings = [
   { input: "field-timeRange", targets: ["timeRange", "modal-timeRange"] },
   { input: "field-location", targets: ["location", "modal-location"] },
   { input: "field-status", targets: ["status-badge"] },
+  { input: "field-participants", targets: ["participants", "modal-participants"] },
   { input: "field-address", targets: ["address"] },
   { input: "field-note", targets: ["note"] }
 ];
@@ -36,22 +37,9 @@ contactsField.addEventListener("input", updateContacts);
 updateContacts();
 
 const statusField = document.getElementById("field-status");
-const statusSelect = document.getElementById("status-select");
 
-const updateStatusSelect = () => {
-  const value = statusField.value.trim() || "已预约";
-  if (statusSelect.options.length > 0) {
-    statusSelect.options[0].textContent = value;
-    statusSelect.value = value;
-  }
-};
-
-statusField.addEventListener("input", updateStatusSelect);
-updateStatusSelect();
-
-statusSelect.addEventListener("change", () => {
-  statusField.value = statusSelect.value;
-  statusField.dispatchEvent(new Event("input"));
+statusField.addEventListener("input", () => {
+  // Status field is now only used for display in the badge
 });
 
 const bookingCard = document.getElementById("booking-card");

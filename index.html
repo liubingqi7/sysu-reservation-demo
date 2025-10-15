@@ -60,6 +60,10 @@
             <input id="field-status" type="text" value="已预约" />
           </label>
           <label>
+            参与者
+            <input id="field-participants" type="text" value="参与者:" />
+          </label>
+          <label>
             页脚地址
             <input
               id="field-address"
@@ -118,11 +122,11 @@
           </section>
           <section class="content-panel">
             <div class="panel-header">
-              <div class="tab-buttons">
+              <!-- <div class="tab-buttons">
                 <button class="tab-button active">我的预约</button>
                 <button class="tab-button">我的邀请</button>
                 <button class="tab-button">我的排队</button>
-              </div>
+              </div> -->
               <div class="filters">
                 <img
                   src="assets/filter-group.png"
@@ -182,10 +186,19 @@
                     />
                     <span id="location">深圳校区健身房-场地1</span>
                   </div>
+                  <div class="booking-detail">
+                    <img
+                      src="assets/icon-participants.png"
+                      alt=""
+                      class="card-icon"
+                      aria-hidden="true"
+                    />
+                    <span id="participants">参与者:</span>
+                  </div>
                 </div>
-                <footer class="booking-card__footer">
+                <!-- <footer class="booking-card__footer">
                   <button class="secondary">取消</button>
-                </footer>
+                </footer> -->
               </section>
             </div>
             <nav class="pagination">
@@ -236,6 +249,10 @@
             <div>
               <dt>费用：</dt>
               <dd id="modal-fee">运动时 ¥5</dd>
+            </div>
+            <div>
+              <dt>参与者：</dt>
+              <dd id="modal-participants">参与者:</dd>
             </div>
           </dl>
           <button class="modal-close" id="modal-close">确认</button>
