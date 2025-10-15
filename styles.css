@@ -9,6 +9,49 @@ body {
   color: #1f2933;
 }
 
+.fullscreen-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(135deg, #105734 0%, #1b6f43 100%);
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(16, 87, 52, 0.3);
+  transition: all 0.3s ease;
+}
+
+.fullscreen-button:hover {
+  background: linear-gradient(135deg, #0d4528 0%, #105734 100%);
+  box-shadow: 0 6px 20px rgba(16, 87, 52, 0.4);
+  transform: translateY(-2px);
+}
+
+.fullscreen-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(16, 87, 52, 0.3);
+}
+
+.fullscreen-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+body:fullscreen .fullscreen-button,
+body:-webkit-full-screen .fullscreen-button,
+body:-moz-full-screen .fullscreen-button,
+body:-ms-fullscreen .fullscreen-button {
+  display: none;
+}
+
 .page {
   display: flex;
   gap: 2.5rem;
@@ -585,5 +628,17 @@ body {
   body {
     background: #f5f6f8;
     min-height: 100%;
+  }
+
+  .fullscreen-button {
+    top: 10px;
+    right: 10px;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .fullscreen-button svg {
+    width: 18px;
+    height: 18px;
   }
 }
